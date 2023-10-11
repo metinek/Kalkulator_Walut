@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kalkulator_Walut.MainPage">
+
+
+    <VerticalStackLayout>
+
+
+
+        <Label
+            Text="Kalkulator Walut"
+            FontSize="32"
+            HorizontalOptions="Center"/>
+
+        <HorizontalStackLayout>
+            <Label
+            Text="Kwota"/>
+            <Entry
+                x:Name="kwotaEnt"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label
+            Text="Otrzymasz: "/>
+            <Label
+                x:Name="otrzymaszLbl"
+                Text=""/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout>
+            <Label
+                Text="kurs 1€ = "/>
+            <Label
+                x:Name="kursLbl"
+                Text="4,55"/>
+            <Label
+                Text="PLN"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Button
+                x:Name="euroNaPlnBtn"
+                Text="Euro -> PLN"
+                WidthRequest="150"
+                Clicked="OnEuroClicked"/>
+
+            <Button
+                x:Name="plnNaEuroBtn"
+                Text="PLN -> Euro"
+                WidthRequest="150"
+                Clicked="OnPlnClicked"
+                IsEnabled="false"/>
+
+            <Button
+            Text="Przelicz"
+            Clicked="OnPrzeliczClicked"
+            HorizontalOptions="Start"/>
+        </HorizontalStackLayout>
+
+        <Label
+            x:Name="lblJSON"/>
+
+
+    </VerticalStackLayout>
+
+
+</ContentPage>
